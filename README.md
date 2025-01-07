@@ -1,2 +1,2 @@
 # personal-gists
-For personal 
+To store personal gists.
