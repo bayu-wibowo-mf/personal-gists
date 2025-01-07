@@ -1,11 +1,11 @@
 -- Get storage information from information schema
-CREATE TABLE `crow-lake-prod-mfcojp.tmp.raven2nd_unused_infodb_table_size` AS (
+CREATE OR REPLACE TABLE `crow-lake-prod-mfcojp.tmp.raven2nd_unused_infodb_table_size` AS (
 SELECT
   *
 FROM
   `crow-lake-prod-mfcojp`.`region-asia-northeast1`.INFORMATION_SCHEMA.TABLE_STORAGE
 WHERE
-  TABLE_NAME IN ("hermes-bounce-status")
+  TABLE_SCHEMA IN ("hermes")
 );
   
 -- Calculate storage cost
